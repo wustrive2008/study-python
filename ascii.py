@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 '''
- 遍历打印目录下的pdf文件
+ 图片生成字符画
 '''
 
 from PIL import Image
