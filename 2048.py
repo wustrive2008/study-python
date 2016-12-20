@@ -75,7 +75,7 @@ class GameField(object):
         moves['Left'] = lambda field: [move_row_left(row) for row in field]
         moves['Right'] = lambda field: invert(moves['Left'](invert(field)))
         moves['Up'] = lambda field: transpose(moves['Left'](transpose(field)))
-        moves['Down'] = lambda field: transpose(moves['Right'](transposefie(field)))
+        moves['Down'] = lambda field: transpose(moves['Right'](transpose(field)))
 
         if direction in moves:
             if self.move_is_possible(direction):
