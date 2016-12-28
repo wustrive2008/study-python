@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-  
 
+#抓取今日头条图片
+
 import json
 
 import urllib 
 import urllib2
 import uuid
 import os
+import sys
 
 url = "http://www.toutiao.com/search_content/?offset=20&format=json&keyword=$keyword&autoload=true&count=20&_=1480675595492"
 localPath='/Users/wubaoguo/Pictures/toutiao'  
@@ -38,4 +41,7 @@ def createFileWithFileName(localPathParam,fileName):
         file.close()  
         return totalPath  
 
-downloadImg(url,"美女写真")
+#输入参数
+param = sys.argv[1]
+
+downloadImg(url,param)
