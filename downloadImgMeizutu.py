@@ -81,7 +81,7 @@ def main(page):
     menu=get_menu(page_url)
     print u'@@@@@@@@@@@@@@@@第 %d 页共有 %d 个主题@@@@@@@@@@@@@@@@' %(page,len(menu))
     for i in menu:
-        dir_name=os.path.join('/Users/wubaoguo/Pictures/MeiZiTu',i[0])
+        dir_name=os.path.join('/Users/wubaoguo/Pictures/mztu',i[0])
         if not os.path.exists(dir_name):
             os.mkdir(dir_name)
         pic_nums=int(get_links(i[1]))
